@@ -66,8 +66,8 @@ int is_clean(char* str) {
   // 0 if they're equal, and a positive value if the first is
   // greater than the second.
   result = strcmp(str, cleaned);
-
-  return result == 0;
+(strlen(cleaned) > 0) ? free(cleaned) : cleaned; 
+return result == 0;
 }
 
 int main() {
